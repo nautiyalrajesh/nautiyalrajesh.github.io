@@ -7,15 +7,17 @@
   <meta name="description" content="Portfolio website for Rajesh Nautiyal, Automation and Regression Lead.">
   <style>
     :root {
-      color-scheme: light;
-      --ink: #17202a;
-      --muted: #607080;
-      --line: #d9e2ea;
-      --paper: #ffffff;
-      --soft: #f4f8fb;
-      --brand: #0f766e;
-      --brand-dark: #115e59;
-      --accent: #b45309;
+      color-scheme: dark;
+      --ink: #f7fbff;
+      --muted: #a7b4c2;
+      --line: rgba(255, 255, 255, 0.12);
+      --paper: rgba(14, 22, 33, 0.84);
+      --soft: #05070b;
+      --brand: #2dd4bf;
+      --brand-dark: #5eead4;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
     }
 
     * {
@@ -24,10 +26,13 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Segoe UI", "Inter", "Trebuchet MS", Arial, sans-serif;
       line-height: 1.6;
       color: var(--ink);
-      background: var(--soft);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(45, 212, 191, 0.16), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(245, 158, 11, 0.12), transparent 30%),
+        linear-gradient(180deg, #05070b 0%, #09111c 48%, #05070b 100%);
     }
 
     a {
@@ -48,8 +53,8 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
+      background: rgba(5, 7, 11, 0.82);
+      backdrop-filter: blur(16px);
     }
 
     .nav {
@@ -63,7 +68,9 @@
     }
 
     .brand {
+      font-size: 17px;
       font-weight: 700;
+      letter-spacing: 0.2px;
       color: var(--ink);
     }
 
@@ -74,15 +81,24 @@
       font-size: 14px;
     }
 
+    .nav-links a {
+      color: #d7e3ee;
+      font-weight: 600;
+    }
+
     .hero {
-      background: linear-gradient(120deg, #e8f3f1 0%, #fff8ed 100%);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(245, 158, 11, 0.06)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
       border-bottom: 1px solid var(--line);
     }
 
     .hero-inner {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 68px 22px 58px;
+      padding: 86px 22px 72px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) 280px;
       gap: 48px;
@@ -91,7 +107,7 @@
 
     .eyebrow {
       margin: 0 0 10px;
-      color: var(--brand-dark);
+      color: var(--accent);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0;
@@ -103,6 +119,8 @@
       font-size: clamp(40px, 7vw, 72px);
       line-height: 0.96;
       letter-spacing: 0;
+      font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
+      text-shadow: 0 12px 38px rgba(0, 0, 0, 0.55);
     }
 
     .intro {
@@ -128,34 +146,62 @@
       gap: 8px;
       border: 1px solid var(--brand);
       border-radius: 6px;
-      background: var(--brand);
-      color: #ffffff;
+      background: linear-gradient(135deg, #2dd4bf, #0f766e);
+      color: #03100e;
       font-weight: 700;
+      box-shadow: 0 14px 34px rgba(45, 212, 191, 0.18);
     }
 
     .button:hover {
-      background: var(--brand-dark);
+      background: linear-gradient(135deg, #5eead4, #14b8a6);
       text-decoration: none;
     }
 
     .button.secondary {
-      background: transparent;
-      color: var(--brand-dark);
+      background: rgba(255, 255, 255, 0.05);
+      color: #e8f6f4;
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: none;
     }
 
     .button.secondary:hover {
-      background: #e3f2ef;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-stats {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+
+    .hero-stats span {
+      display: block;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-stats strong {
+      display: block;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.1;
     }
 
     .portrait-wrap {
       justify-self: end;
       width: min(280px, 72vw);
       aspect-ratio: 1;
-      border: 8px solid #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 8px;
-      box-shadow: 0 22px 60px rgba(23, 32, 42, 0.18);
+      box-shadow: var(--shadow), 0 0 0 8px rgba(255, 255, 255, 0.045);
       overflow: hidden;
-      background: #d8e5ea;
+      background: #111827;
     }
 
     .portrait-wrap img {
@@ -172,7 +218,7 @@
     }
 
     .section {
-      padding: 34px 0;
+      padding: 38px 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -184,6 +230,13 @@
       margin: 0 0 18px;
       font-size: 24px;
       line-height: 1.2;
+      font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
+    }
+
+    .section > p {
+      max-width: 920px;
+      color: var(--muted);
+      font-size: 17px;
     }
 
     .grid {
@@ -198,6 +251,14 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(45, 212, 191, 0.42);
+      background: rgba(18, 29, 43, 0.94);
     }
 
     .card h3,
@@ -205,6 +266,7 @@
       margin: 0 0 8px;
       font-size: 18px;
       line-height: 1.25;
+      color: var(--ink);
     }
 
     .card p,
@@ -223,7 +285,13 @@
       border-left: 4px solid var(--brand);
       background: var(--paper);
       border-radius: 0 8px 8px 0;
-      box-shadow: 0 1px 0 rgba(23, 32, 42, 0.04);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+      transition: border-color 180ms ease, background 180ms ease;
+    }
+
+    .timeline-item:hover {
+      border-left-color: var(--accent);
+      background: rgba(18, 29, 43, 0.94);
     }
 
     .meta {
@@ -248,6 +316,7 @@
       background: var(--paper);
       color: var(--muted);
       font-size: 15px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
     }
 
     .skills strong {
@@ -264,19 +333,22 @@
       align-items: center;
       padding: 28px;
       border-radius: 8px;
-      background: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(45, 212, 191, 0.16), rgba(245, 158, 11, 0.12)),
+        #08111c;
+      border: 1px solid var(--line);
       color: #ffffff;
     }
 
     .contact p {
       margin: 6px 0 0;
-      color: #d5dde5;
+      color: #c6d2df;
     }
 
     .contact .button {
-      border-color: #ffffff;
-      background: #ffffff;
-      color: var(--ink);
+      border-color: var(--brand);
+      background: linear-gradient(135deg, #2dd4bf, #0f766e);
+      color: #03100e;
     }
 
     footer {
@@ -296,11 +368,21 @@
         width: 100%;
         justify-content: space-between;
         gap: 10px;
+        flex-wrap: wrap;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
-        padding-top: 44px;
+        padding-top: 46px;
+        gap: 32px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(42px, 13vw, 58px);
       }
 
       .portrait-wrap {
@@ -339,14 +421,19 @@
           <p class="eyebrow">Automation and Regression Lead</p>
           <h1>Rajesh Nautiyal</h1>
           <p class="intro">
-            14+ years in network automation testing, QA automation, regression
-            validation, and infrastructure management for Cisco enterprise
-            networking platforms.
+            I build and lead large-scale Cisco network automation, regression
+            validation, and AI-assisted failure triage for enterprise networking
+            platforms.
           </p>
           <div class="actions">
             <a class="button" href="assets/Rajesh_Nautiyal_Resume_v1.pdf" download>Download Resume</a>
             <a class="button secondary" href="http://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="button secondary" href="mailto:rajeshnautiyal213@gmail.com">Email</a>
+          </div>
+          <div class="hero-stats" aria-label="Career highlights">
+            <span><strong>14+</strong>Years Experience</span>
+            <span><strong>150+</strong>Devices Managed</span>
+            <span><strong>500+</strong>Automation Scripts</span>
           </div>
         </div>
         <div class="portrait-wrap">
@@ -359,12 +446,10 @@
       <section class="section" id="about">
         <h2 class="section-title">About</h2>
         <p>
-          I lead regression and automation work across Cisco NXOS and IOS-XE
-          platforms, with hands-on ownership of Python, PyATS, TCL, Jenkins,
-          Linux administration, Cisco UCS, VMware ESXi, AWS, and automation lab
-          environments. My work includes release validation, failure analysis,
-          infrastructure readiness, script maintenance, and mentoring engineers
-          on automation workflows and Cisco platform debugging.
+          Automation and Regression Lead with deep Cisco NXOS and IOS-XE
+          experience. I own regression execution, lab readiness, Jenkins
+          pipelines, Python/PyATS automation, failure analysis, and release
+          validation for complex enterprise networking programs.
         </p>
       </section>
 
@@ -373,15 +458,15 @@
         <div class="grid">
           <article class="card">
             <h3>Regression Leadership</h3>
-            <p>Lead regression ecosystems across multiple release cycles, including quality sign-off, defect follow-up, and release validation.</p>
+            <p>Lead release validation, regression analysis, defect follow-up, and quality sign-off across parallel Cisco platform cycles.</p>
           </article>
           <article class="card">
             <h3>Automation Scale</h3>
-            <p>Manage automation infrastructure with 150+ physical and virtual devices and 500+ regression automation scripts.</p>
+            <p>Own large automation labs with 150+ physical and virtual devices and 500+ regression scripts.</p>
           </article>
           <article class="card">
             <h3>AI-Assisted Triage</h3>
-            <p>Built a triage bot that reduced regression failure analysis from 1-2 hours to about 15 minutes.</p>
+            <p>Reduced failure triage from 1-2 hours to about 15 minutes using log, Jenkins, traceback, and defect-history analysis.</p>
           </article>
         </div>
       </section>
@@ -393,30 +478,27 @@
             <div class="meta">Dec 2022 - Present</div>
             <h3>Senior Professional II - Capgemini</h3>
             <p>
-              Regression and Automation Lead for Cisco NXOS and IOS-XE platforms.
-              Lead a 5-member engineering team handling regression execution,
-              automation maintenance, failure triage, lab readiness, release
-              validation, regression analysis, and quality sign-off.
+              Lead Cisco NXOS and IOS-XE regression automation for Capgemini's
+              Cisco project, guiding a 5-member team across execution, triage,
+              lab readiness, release validation, and quality sign-off.
             </p>
           </article>
           <article class="timeline-item">
             <div class="meta">Mar 2018 - Dec 2022</div>
             <h3>Associate Consultant / Technical Lead - TCS</h3>
             <p>
-              Led automation and regression testing initiatives for Cisco platforms,
-              including PyATS, YANG models, REST APIs, JSON/YAML parsing, Cisco
-              internal automation libraries, Linux servers, Cisco UCS labs, and
-              model-driven programmability validation.
+              Led Cisco automation and regression testing using PyATS, YANG
+              models, REST APIs, JSON/YAML parsing, Linux servers, Cisco UCS
+              labs, and model-driven programmability validation.
             </p>
           </article>
           <article class="timeline-item">
             <div class="meta">May 2012 - Feb 2018</div>
             <h3>Automation Testing Engineer - TCS</h3>
             <p>
-              Developed TCL automation scripts for router and switch command
-              validation, supported L2/L3 protocol regression testing, analyzed
-              device logs and automation failures, and handled defect reporting
-              for Cisco NXOS and IOS-XE releases.
+              Built TCL automation for router and switch validation, supported
+              L2/L3 protocol regression, debugged device logs and failures, and
+              handled defect reporting for Cisco releases.
             </p>
           </article>
         </div>
@@ -441,15 +523,15 @@
         <div class="grid">
           <article class="card">
             <h3>AI-Assisted Regression Failure Triage Bot</h3>
-            <p>Analyzes Jenkins failures, traceback errors, device logs, regression results, and historical defect data to suggest probable root causes and next debugging steps.</p>
+            <p>AI workflow that reviews Jenkins failures, traceback errors, logs, result files, and defect history to suggest root cause and next debug steps.</p>
           </article>
           <article class="card">
             <h3>Cisco Regression Automation Framework</h3>
-            <p>Managed 150+ devices and 500+ automation scripts across Cisco NXOS and IOS-XE, including lab readiness, Jenkins jobs, Python environments, and continuous regression workflows.</p>
+            <p>Regression ecosystem spanning 150+ devices, 500+ scripts, Jenkins jobs, Python environments, lab readiness, and continuous validation.</p>
           </article>
           <article class="card">
             <h3>YANG / REST API Automation Testing</h3>
-            <p>Validated Python automation for network programmability using YANG models, REST APIs, JSON/YAML parsing, telemetry validation, and API response validation.</p>
+            <p>Validated network programmability flows with YANG, REST APIs, JSON/YAML parsing, telemetry checks, and API response validation.</p>
           </article>
         </div>
       </section>
@@ -459,15 +541,15 @@
         <div class="grid">
           <article class="card">
             <h3>300+ Integrations</h3>
-            <p>Completed more than 300 automation integration activities across Cisco platform validation work.</p>
+            <p>Delivered 300+ automation integrations across Cisco platform validation programs.</p>
           </article>
           <article class="card">
             <h3>Mentorship</h3>
-            <p>Trained 10+ trainees and junior engineers on automation, regression workflows, and Cisco platform debugging.</p>
+            <p>Trained 10+ engineers on automation workflows, regression execution, and Cisco platform debugging.</p>
           </article>
           <article class="card">
             <h3>Recognition</h3>
-            <p>Certificate of Excellence for TCL to PyATS migration, 4x Special Initiative Award recipient, and Star of the Month award.</p>
+            <p>Certificate of Excellence for TCL to PyATS migration, 4x Special Initiative Awards, and Star of the Month.</p>
           </article>
         </div>
       </section>
