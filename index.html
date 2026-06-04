@@ -234,21 +234,27 @@
     }
 
     .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: grid;
+      gap: 12px;
       padding: 0;
       margin: 0;
       list-style: none;
     }
 
     .skills li {
-      padding: 8px 11px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 8px;
       background: var(--paper);
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
+    }
+
+    .skills strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 15px;
     }
 
     .contact {
@@ -417,31 +423,16 @@
       </section>
 
       <section class="section" id="skills">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
         <ul class="skills">
-          <li>Cisco NXOS</li>
-          <li>IOS-XE</li>
-          <li>N7K / N9K / N9Kv</li>
-          <li>ASR1K / CAT9K / CSR1000v</li>
-          <li>Python</li>
-          <li>PyATS</li>
-          <li>TCL</li>
-          <li>Bash</li>
-          <li>YAML / JSON</li>
-          <li>requests / pandas</li>
-          <li>paramiko / netmiko</li>
-          <li>pytest</li>
-          <li>REST APIs</li>
-          <li>YANG Models</li>
-          <li>Jenkins</li>
-          <li>Git / CVS</li>
-          <li>Linux RHEL7/RHEL8</li>
-          <li>Cisco UCS</li>
-          <li>VMware ESXi</li>
-          <li>AWS</li>
-          <li>VXLAN / BGP / OSPF</li>
-          <li>EIGRP / HSRP / VRRP</li>
-          <li>VLAN / STP / EVPN / MPLS</li>
+          <li><strong>Network Platforms</strong>Cisco NXOS, IOS-XE, N7K, N9K, N9Kv, ASR1K, CAT9K, CSR1000v</li>
+          <li><strong>Automation and Scripting</strong>Python, PyATS, TCL, Bash, Shell Scripting, YAML, JSON</li>
+          <li><strong>Python Libraries and APIs</strong>requests, pandas, paramiko, netmiko, pytest, REST APIs, Cisco internal automation libraries</li>
+          <li><strong>Network Programmability Testing</strong>YANG Models, REST APIs, Model-Driven Programmability Validation, Device Configuration Validation, Telemetry Validation, API Response Validation</li>
+          <li><strong>CI/CD and Tools</strong>Jenkins job execution and management, Git, CVS, Visual Studio Code, GitHub Copilot, Codex</li>
+          <li><strong>Infrastructure and Cloud</strong>Linux RHEL7/RHEL8, Cisco UCS, VMware ESXi, AWS</li>
+          <li><strong>Testing and QA</strong>Regression Testing, Release Validation, Automation Validation, L2/L3 Protocol Script Testing, Failure Analysis, Log Analysis, Root Cause Support, Defect Tracking</li>
+          <li><strong>Protocol Script Test Coverage</strong>VXLAN, BGP, OSPF, EIGRP, HSRP, VRRP, VLAN, STP, EVPN, MPLS</li>
         </ul>
       </section>
 
