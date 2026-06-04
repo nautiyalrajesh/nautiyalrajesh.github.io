@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajesh Nautiyal | Portfolio</title>
+  <meta name="description" content="Portfolio website for Rajesh Nautiyal.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #607080;
+      --line: #d9e2ea;
+      --paper: #ffffff;
+      --soft: #f4f8fb;
+      --brand: #0f766e;
+      --brand-dark: #115e59;
+      --accent: #b45309;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--soft);
+    }
+
+    a {
+      color: var(--brand-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #e8f3f1 0%, #fff8ed 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 68px 22px 58px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 44px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--brand);
+      border-radius: 6px;
+      background: var(--brand);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: var(--brand-dark);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--brand-dark);
+    }
+
+    .button.secondary:hover {
+      background: #e3f2ef;
+    }
+
+    .portrait-wrap {
+      justify-self: end;
+      width: min(280px, 72vw);
+      aspect-ratio: 1;
+      border: 8px solid #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 22px 60px rgba(23, 32, 42, 0.18);
+      overflow: hidden;
+      background: #d8e5ea;
+    }
+
+    .portrait-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 42px 22px 72px;
+    }
+
+    .section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 160px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .card h3,
+    .timeline h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .card p,
+    .timeline p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      padding: 22px;
+      border-left: 4px solid var(--brand);
+      background: var(--paper);
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 1px 0 rgba(23, 32, 42, 0.04);
+    }
+
+    .meta {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      padding: 28px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    .contact p {
+      margin: 6px 0 0;
+      color: #d5dde5;
+    }
+
+    .contact .button {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    footer {
+      padding: 24px 22px 36px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 44px;
+      }
+
+      .portrait-wrap {
+        justify-self: start;
+        width: min(240px, 78vw);
+        order: -1;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">Rajesh Nautiyal</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h1>Rajesh Nautiyal</h1>
+          <p class="intro">
+            Professional portfolio based on my resume, highlighting practical experience,
+            technical strengths, selected work, and ways to connect.
+          </p>
+          <div class="actions">
+            <a class="button" href="assets/Rajesh_Nautiyal_Resume_v1.pdf" download>Download Resume</a>
+            <a class="button secondary" href="http://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <img src="assets/cardPic1.jpeg" alt="Portrait of Rajesh Nautiyal">
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section" id="about">
+        <h2 class="section-title">About</h2>
+        <p>
+          I am Rajesh Nautiyal. This portfolio is a concise web version of my CV,
+          designed for GitHub Pages and ready to expand with project links,
+          achievements, certifications, and contact details.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Highlights</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Professional Profile</h3>
+            <p>Add your current role, domain, and strongest career summary from the resume here.</p>
+          </article>
+          <article class="card">
+            <h3>Technical Work</h3>
+            <p>Showcase tools, platforms, systems, and projects that best represent your CV.</p>
+          </article>
+          <article class="card">
+            <h3>Career Focus</h3>
+            <p>Use this section to describe the kind of roles or collaborations you are targeting.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="meta">Current / Recent Role</div>
+            <h3>Job Title - Company Name</h3>
+            <p>
+              Replace this with a short impact-focused summary from your CV, such as systems built,
+              responsibilities handled, measurable outcomes, and business domain.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">Previous Role</div>
+            <h3>Job Title - Company Name</h3>
+            <p>
+              Add another resume role here. Keep each entry to two or three high-value lines so the
+              page stays easy to scan.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills">
+          <li>Programming</li>
+          <li>Web Development</li>
+          <li>Databases</li>
+          <li>Cloud / Deployment</li>
+          <li>Automation</li>
+          <li>Problem Solving</li>
+          <li>Documentation</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>Add a project from your CV with the problem, your contribution, and the result.</p>
+          </article>
+          <article class="card">
+            <h3>Project Two</h3>
+            <p>Link GitHub repositories, live demos, dashboards, or case studies here.</p>
+          </article>
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>Use project cards for work that proves your skills quickly to recruiters.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact">
+          <div>
+            <h2 class="section-title">Contact</h2>
+            <p>Connect with me on LinkedIn or download my resume for more details.</p>
+          </div>
+          <a class="button" href="http://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">Open LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Rajesh Nautiyal. Built for GitHub Pages.</span>
+    </footer>
+  </div>
+</body>
+</html>
