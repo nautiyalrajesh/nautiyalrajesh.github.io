@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rajesh Nautiyal | Network Automation and AI-Enabled Validation Lead</title>
-  <meta name="description" content="Portfolio website for Rajesh Nautiyal, Network Automation and AI-Enabled Validation Lead.">
+  <title>Rajesh Nautiyal | Network Automation Lead</title>
+  <meta name="description" content="Portfolio website for Rajesh Nautiyal, Network Automation Lead specializing in Cisco enterprise networking, AI-assisted troubleshooting, and regression validation.">
   <style>
     :root {
       color-scheme: dark;
@@ -24,10 +24,14 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", "Inter", "Trebuchet MS", Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.5;
       color: var(--ink);
       background:
         radial-gradient(circle at 18% 8%, rgba(45, 212, 191, 0.16), transparent 28%),
@@ -60,7 +64,7 @@
     .nav {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 14px 22px;
+      padding: 10px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -98,10 +102,10 @@
     .hero-inner {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 86px 22px 72px;
+      padding: 46px 22px 38px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 48px;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 32px;
       align-items: center;
     }
 
@@ -116,7 +120,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(38px, 6vw, 58px);
       line-height: 0.96;
       letter-spacing: 0;
       font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
@@ -125,21 +129,21 @@
 
     .intro {
       max-width: 650px;
-      margin: 22px 0 0;
+      margin: 16px 0 0;
       color: var(--muted);
-      font-size: 19px;
+      font-size: 17px;
     }
 
     .actions {
-      margin-top: 28px;
+      margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .button {
-      min-height: 44px;
-      padding: 10px 16px;
+      min-height: 38px;
+      padding: 8px 13px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -150,11 +154,19 @@
       color: #03100e;
       font-weight: 700;
       box-shadow: 0 14px 34px rgba(45, 212, 191, 0.18);
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
     .button:hover {
       background: linear-gradient(135deg, #5eead4, #14b8a6);
       text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    .button:focus-visible,
+    .timeline-node:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
 
     .button.secondary {
@@ -169,16 +181,16 @@
     }
 
     .hero-stats {
-      margin-top: 28px;
+      margin-top: 18px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      gap: 8px;
       max-width: 620px;
     }
 
     .hero-stats span {
       display: block;
-      padding: 14px;
+      padding: 10px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.055);
@@ -189,13 +201,13 @@
     .hero-stats strong {
       display: block;
       color: var(--ink);
-      font-size: 24px;
+      font-size: 21px;
       line-height: 1.1;
     }
 
     .portrait-wrap {
       justify-self: end;
-      width: min(280px, 72vw);
+      width: min(220px, 60vw);
       aspect-ratio: 1;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 8px;
@@ -214,11 +226,11 @@
     main {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 42px 22px 72px;
+      padding: 24px 22px 44px;
     }
 
     .section {
-      padding: 38px 0;
+      padding: 24px 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -227,8 +239,8 @@
     }
 
     .section-title {
-      margin: 0 0 18px;
-      font-size: 24px;
+      margin: 0 0 12px;
+      font-size: 21px;
       line-height: 1.2;
       font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
     }
@@ -236,27 +248,29 @@
     .section > p {
       max-width: 920px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 12px;
     }
 
     .card {
-      min-height: 160px;
-      padding: 20px;
+      min-height: 132px;
+      padding: 16px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+      display: flex;
+      flex-direction: column;
       transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       border-color: rgba(45, 212, 191, 0.42);
       background: rgba(18, 29, 43, 0.94);
     }
@@ -264,7 +278,7 @@
     .card h3,
     .timeline h3 {
       margin: 0 0 8px;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.25;
       color: var(--ink);
     }
@@ -273,65 +287,180 @@
     .timeline p {
       margin: 0;
       color: var(--muted);
+      font-size: 14px;
     }
 
     .timeline {
+      position: relative;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+      counter-reset: timeline-step;
     }
 
-    .timeline-item {
-      padding: 22px;
-      border-left: 4px solid var(--brand);
+    .timeline-node {
+      position: relative;
+      min-height: 118px;
+      padding: 14px;
+      border: 1px solid var(--line);
       background: var(--paper);
-      border-radius: 0 8px 8px 0;
+      border-radius: 8px;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-      transition: border-color 180ms ease, background 180ms ease;
+      color: inherit;
+      cursor: pointer;
+      text-align: left;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
-    .timeline-item:hover {
-      border-left-color: var(--accent);
+    .timeline-node::before {
+      counter-increment: timeline-step;
+      content: counter(timeline-step);
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(45, 212, 191, 0.14);
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .timeline-node:hover,
+    .timeline-node.is-active {
+      transform: translateY(-4px);
+      border-color: rgba(45, 212, 191, 0.52);
       background: rgba(18, 29, 43, 0.94);
     }
 
-    .meta {
+    .timeline-node.is-active {
+      box-shadow: 0 16px 42px rgba(45, 212, 191, 0.18);
+    }
+
+    .timeline-dot {
+      display: block;
+      width: 32px;
+      height: 3px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      background: var(--brand);
+    }
+
+    .timeline-node.is-active .timeline-dot {
+      background: var(--accent);
+    }
+
+    .meta,
+    .timeline-period {
       margin-bottom: 8px;
       color: var(--accent);
       font-size: 14px;
       font-weight: 700;
     }
 
+    .timeline-node strong,
+    .timeline-node small {
+      display: block;
+    }
+
+    .timeline-node strong {
+      margin-bottom: 4px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .timeline-node small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .timeline-detail {
+      min-height: 112px;
+      padding: 16px;
+      border: 1px solid rgba(45, 212, 191, 0.32);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(245, 158, 11, 0.07)),
+        var(--paper);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .timeline-detail h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .timeline-detail p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .experience-detail-list {
+      margin: 12px 0 0;
+      padding: 12px 14px 12px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.045);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .experience-detail-list li + li {
+      margin-top: 8px;
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding: 0 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card li + li {
+      margin-top: 6px;
+    }
+
     .skills {
       display: grid;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      gap: 8px;
       padding: 0;
       margin: 0;
       list-style: none;
     }
 
     .skills li {
-      padding: 14px 16px;
+      padding: 9px 12px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
       color: var(--muted);
-      font-size: 15px;
+      font-size: 13px;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
     }
 
     .skills strong {
-      display: block;
-      margin-bottom: 4px;
+      display: inline;
+      margin-right: 6px;
       color: var(--ink);
-      font-size: 15px;
+      font-size: 14px;
+    }
+
+    .education-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .contact {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 22px;
+      gap: 18px;
       align-items: center;
-      padding: 28px;
+      padding: 20px;
       border-radius: 8px;
       background:
         linear-gradient(135deg, rgba(45, 212, 191, 0.16), rgba(245, 158, 11, 0.12)),
@@ -343,6 +472,12 @@
     .contact p {
       margin: 6px 0 0;
       color: #c6d2df;
+      font-size: 14px;
+    }
+
+    .contact .actions {
+      justify-content: flex-end;
+      margin-top: 0;
     }
 
     .contact .button {
@@ -352,7 +487,7 @@
     }
 
     footer {
-      padding: 24px 22px 36px;
+      padding: 18px 22px 28px;
       color: var(--muted);
       text-align: center;
       font-size: 14px;
@@ -373,8 +508,8 @@
 
       .hero-inner {
         grid-template-columns: 1fr;
-        padding-top: 46px;
-        gap: 32px;
+        padding-top: 28px;
+        gap: 24px;
       }
 
       .hero-stats {
@@ -382,7 +517,7 @@
       }
 
       h1 {
-        font-size: clamp(42px, 13vw, 58px);
+        font-size: clamp(38px, 12vw, 52px);
       }
 
       .portrait-wrap {
@@ -391,12 +526,31 @@
         order: -1;
       }
 
-      .grid {
+      .grid,
+      .skills,
+      .education-grid {
         grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-node {
+        min-height: auto;
+        padding: 14px;
+      }
+
+      .timeline-dot {
+        width: 28px;
       }
 
       .contact {
         grid-template-columns: 1fr;
+      }
+
+      .contact .actions {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -411,6 +565,7 @@
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
+          <a href="assets/Rajesh_Nautiyal_Resume_2026_v2.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
       </nav>
     </header>
@@ -418,10 +573,10 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <div>
-          <p class="eyebrow">Network Automation and AI-Enabled Validation Lead</p>
+          <p class="eyebrow">Network Automation Lead</p>
           <h1>Rajesh Nautiyal</h1>
           <p class="intro">
-            Network Automation and AI-Enabled Validation Lead with 14+ years of
+            Network Automation Lead with 14+ years of
             experience in Cisco enterprise networking, AI-assisted troubleshooting,
             regression validation, and automation infrastructure operations.
           </p>
@@ -446,11 +601,11 @@
       <section class="section" id="about">
         <h2 class="section-title">About</h2>
         <p>
-          Network Automation and AI-Enabled Validation Lead with deep Cisco NXOS
-          and IOS-XE experience. I own regression execution, lab readiness,
-          Jenkins pipelines, Python/PyATS automation, AI-assisted troubleshooting,
-          domain-specific RAG workflows, and release validation for complex
-          enterprise networking programs.
+          Network Automation Lead with deep Cisco NXOS and IOS-XE experience. I
+          drive network automation, AI-assisted troubleshooting, regression
+          validation, and infrastructure operations for Cisco enterprise networking
+          platforms, including Python, PyATS, CI/CD, domain-specific RAG, Copilot,
+          Codex, and agent-assisted engineering workflows.
         </p>
       </section>
 
@@ -459,7 +614,7 @@
         <div class="grid">
           <article class="card">
             <h3>AI-Assisted Troubleshooting</h3>
-            <p>Built AI-powered support workflows that reduced regression failure triage from 1-2 hours to about 15 minutes.</p>
+            <p>Built AI-powered support workflows that reduced regression failure triage from 1-2 hours to approximately 15 minutes.</p>
           </article>
           <article class="card">
             <h3>Automation Scale</h3>
@@ -474,46 +629,57 @@
 
       <section class="section" id="experience">
         <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="meta">Dec 2022 - Present</div>
-            <h3>Senior Professional II - Capgemini</h3>
-            <p>
-              Lead regression and automation validation for Cisco NXOS and IOS-XE
-              platforms, collaborating directly with Cisco engineering teams on
-              enterprise networking releases.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <div class="meta">Mar 2018 - Dec 2022</div>
-            <h3>Associate Consultant / Technical Lead - TCS</h3>
-            <p>
-              Led Cisco automation and regression testing using PyATS, YANG
-              models, REST APIs, JSON/YAML parsing, Linux servers, Cisco UCS
-              labs, and model-driven programmability validation.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <div class="meta">May 2012 - Feb 2018</div>
-            <h3>Automation Testing Engineer - TCS</h3>
-            <p>
-              Built TCL automation for router and switch validation, supported
-              L2/L3 protocol regression, debugged device logs and failures, and
-              handled defect reporting for Cisco releases.
-            </p>
-          </article>
+        <div class="timeline" aria-label="Career timeline">
+          <button class="timeline-node is-active" type="button" aria-pressed="true" data-role="Senior Professional II - Capgemini" data-period="Dec 2022 - Present" data-summary="Lead regression and automation validation for Cisco NXOS and IOS-XE platforms, manage large-scale lab readiness, and collaborate directly with Cisco engineering teams on enterprise networking releases." data-details="Lead a team of 5 engineers responsible for regression execution, automation maintenance, failure triage, release validation, and quality sign-off activities.|Manage large-scale automation infrastructure comprising 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.|Own automation lab readiness, topology creation, hardware allocation, Linux administration, and Python-based validation environments.|Designed and implemented an AI-powered regression support assistant enabling engineers to access regression insights, troubleshooting guidance, and operational knowledge on demand.|Developed AI-assisted root cause analysis and failure triage solutions using domain-specific RAG, reducing investigation time from 1-2 hours to approximately 15 minutes.|Built AI-assisted topology validation and infrastructure automation solutions for connectivity verification, device cleanup, baseline provisioning, and environment readiness.|Leveraged GitHub Copilot, Codex, and AI-assisted development workflows to accelerate automation development, code remediation, debugging, and engineering productivity.|Developed a Django-based infrastructure management application for Cisco UCS environments using Codex-assisted development workflows, supporting virtual device lifecycle management and operational monitoring.|Trained and mentored 10+ engineers on automation frameworks, AI-assisted troubleshooting, Cisco platform debugging, and operational best practices.">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-period">Dec 2022 - Present</span>
+            <strong>Capgemini</strong>
+            <small>Senior Professional II</small>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Associate Consultant / Technical Lead - TCS" data-period="Mar 2018 - Dec 2022" data-summary="Led Cisco automation and regression testing using PyATS, YANG models, REST APIs, JSON/YAML parsing, Linux servers, Cisco UCS labs, and model-driven programmability validation." data-details="Led automation and regression testing initiatives for Cisco NXOS and IOS-XE platforms.|Tested, validated, and supported Python-based automation scripts using PyATS, YANG models, REST APIs, JSON/YAML parsing, and Cisco internal automation libraries.|Set up environments and automation flows for model-driven programmability validation, including device configuration validation, telemetry validation, and API response validation.|Managed automation labs, Linux servers, regression infrastructure, and Cisco UCS-based test environments.|Supported regression testing and automation validation for protocol scripts covering VXLAN, BGP, OSPF, EIGRP, HSRP, VRRP, VLAN, STP, EVPN, and MPLS.|Performed failure analysis, root cause support, defect tracking, and quality validation for Cisco platform releases.|Coordinated automation integrations and release validation activities across multiple Cisco platform teams.">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-period">Mar 2018 - Dec 2022</span>
+            <strong>TCS</strong>
+            <small>Associate Consultant / Technical Lead</small>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Automation Testing Engineer - TCS" data-period="May 2012 - Feb 2018" data-summary="Built TCL automation for router and switch validation, supported L2/L3 protocol regression, debugged device logs and failures, and handled defect reporting for Cisco releases." data-details="Developed TCL automation scripts for router and switch command validation.|Performed regression testing and debugging support for Cisco NXOS and IOS-XE platforms.|Worked on L2/L3 protocol script regression testing and automation validation.|Analyzed device logs, test failures, automation errors, and regression results to identify issues.|Supported defect reporting and issue tracking using Cisco internal defect management tools.">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-period">May 2012 - Feb 2018</span>
+            <strong>TCS</strong>
+            <small>Automation Testing Engineer</small>
+          </button>
         </div>
+        <article class="timeline-detail" aria-live="polite">
+          <div class="timeline-period" id="timeline-period">Dec 2022 - Present</div>
+          <h3 id="timeline-role">Senior Professional II - Capgemini</h3>
+          <p id="timeline-summary">
+            Lead regression and automation validation for Cisco NXOS and IOS-XE
+            platforms, manage large-scale lab readiness, and collaborate directly
+            with Cisco engineering teams on enterprise networking releases.
+          </p>
+          <ul class="experience-detail-list" id="experience-details-list">
+            <li>Lead a team of 5 engineers responsible for regression execution, automation maintenance, failure triage, release validation, and quality sign-off activities.</li>
+            <li>Manage large-scale automation infrastructure comprising 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.</li>
+            <li>Own automation lab readiness, topology creation, hardware allocation, Linux administration, and Python-based validation environments.</li>
+            <li>Designed and implemented an AI-powered regression support assistant enabling engineers to access regression insights, troubleshooting guidance, and operational knowledge on demand.</li>
+            <li>Developed AI-assisted root cause analysis and failure triage solutions using domain-specific RAG, reducing investigation time from 1-2 hours to approximately 15 minutes.</li>
+            <li>Built AI-assisted topology validation and infrastructure automation solutions for connectivity verification, device cleanup, baseline provisioning, and environment readiness.</li>
+            <li>Leveraged GitHub Copilot, Codex, and AI-assisted development workflows to accelerate automation development, code remediation, debugging, and engineering productivity.</li>
+            <li>Developed a Django-based infrastructure management application for Cisco UCS environments using Codex-assisted development workflows, supporting virtual device lifecycle management and operational monitoring.</li>
+            <li>Trained and mentored 10+ engineers on automation frameworks, AI-assisted troubleshooting, Cisco platform debugging, and operational best practices.</li>
+          </ul>
+        </article>
       </section>
 
       <section class="section" id="skills">
         <h2 class="section-title">Technical Skills</h2>
         <ul class="skills">
-          <li><strong>AI &amp; Agentic Automation</strong>GitHub Copilot, Codex, Prompt Engineering, Agent-Assisted Workflows, Domain-Specific RAG, AI-Assisted Development, AI-Based Root Cause Analysis</li>
+          <li><strong>AI &amp; Agentic Automation</strong>GitHub Copilot, Codex, Prompt Engineering, Agent-Assisted Workflow Design, Domain-Specific RAG, AI-Assisted Development, AI-Based Root Cause Analysis, Conversational Knowledge Systems, AI-Driven Validation and Troubleshooting, LLM-Assisted Engineering Workflows</li>
           <li><strong>Automation and Development</strong>Python, PyATS, Pytest, Django, TCL, Bash, Shell Scripting, YAML, JSON</li>
           <li><strong>Network Platforms</strong>Cisco NXOS, IOS-XE, N7K, N9K, N9Kv, ASR1K, CAT9K, CSR1000v</li>
           <li><strong>Python Libraries and APIs</strong>requests, pandas, paramiko, netmiko, pytest, REST APIs, Cisco internal automation libraries</li>
           <li><strong>Network Programmability Testing</strong>YANG Models, REST APIs, Model-Driven Programmability Validation, Device Configuration Validation, Telemetry Validation, API Response Validation</li>
-          <li><strong>CI/CD and Tools</strong>Jenkins job execution and management, Git, CVS, Visual Studio Code, GitHub Copilot, Codex</li>
+          <li><strong>CI/CD and Tools</strong>Jenkins, Git, CVS, Visual Studio Code, CI/CD job execution and management</li>
           <li><strong>Infrastructure and Cloud</strong>Linux RHEL7/RHEL8, Cisco UCS, VMware ESXi, AWS</li>
           <li><strong>Testing and QA</strong>Regression Testing, Release Validation, Automation Validation, L2/L3 Protocol Script Testing, Failure Analysis, Log Analysis, Root Cause Support, Defect Tracking</li>
           <li><strong>Protocol Script Test Coverage</strong>VXLAN, BGP, OSPF, EIGRP, HSRP, VRRP, VLAN, STP, EVPN, MPLS</li>
@@ -525,15 +691,30 @@
         <div class="grid">
           <article class="card">
             <h3>AI-Powered Network Validation and Failure Triage Solution</h3>
-            <p>AI-assisted triage and RCA solution that analyzes Jenkins failures, traceback errors, device logs, regression result files, and historical defect data.</p>
+            <p>AI-assisted triage and RCA solution that analyzes Jenkins failures, traceback errors, device logs, regression result files, and historical defect data to suggest probable root causes and next debugging steps.</p>
+            <ul>
+              <li>Analyzes Jenkins failures, traceback errors, device logs, regression result files, and historical defect data.</li>
+              <li>Identifies probable root causes and recommends practical next debugging steps.</li>
+              <li>Correlates current failures with past known issues to speed up validation decisions.</li>
+            </ul>
           </article>
           <article class="card">
             <h3>AI-Driven Network Operations Assistant</h3>
-            <p>AI-powered automation workflows leveraging domain-specific instructions, Copilot, Codex, and internal knowledge systems for troubleshooting and validation support.</p>
+            <p>AI-powered automation workflows leveraging domain-specific instructions, Copilot, Codex, and internal knowledge systems for regression insights, troubleshooting guidance, topology validation, and infrastructure operations support.</p>
+            <ul>
+              <li>Provides regression insights and troubleshooting guidance using domain-specific instructions and internal knowledge systems.</li>
+              <li>Supports topology validation, infrastructure operations, and automation recommendations.</li>
+              <li>Uses Copilot, Codex, and agent-assisted workflows to improve engineering productivity.</li>
+            </ul>
           </article>
           <article class="card">
             <h3>Cisco Regression Automation Framework</h3>
             <p>Regression ecosystem spanning 150+ devices, 500+ scripts, Jenkins jobs, Python environments, lab readiness, and continuous validation.</p>
+            <ul>
+              <li>Supports 150+ physical and virtual devices and 500+ automation scripts across Cisco NXOS and IOS-XE platforms.</li>
+              <li>Covers lab readiness, Jenkins job execution, Python environments, and continuous regression workflows.</li>
+              <li>Enables parallel release validation with structured automation maintenance and infrastructure readiness.</li>
+            </ul>
           </article>
         </div>
       </section>
@@ -558,18 +739,14 @@
 
       <section class="section">
         <h2 class="section-title">Education and Certification</h2>
-        <div class="grid">
+        <div class="grid education-grid">
           <article class="card">
             <h3>Bachelor of Technology in Information Technology</h3>
             <p>GB Pant University of Agriculture and Technology, 2011.</p>
           </article>
           <article class="card">
-            <h3>AWS Certified Developer Associate</h3>
+            <h3>AWS Certified Developer - Associate</h3>
             <p>Certification earned in 2022.</p>
-          </article>
-          <article class="card">
-            <h3>Location</h3>
-            <p>Delhi NCR, India.</p>
           </article>
         </div>
       </section>
@@ -580,14 +757,45 @@
             <h2 class="section-title">Contact</h2>
             <p>Delhi NCR, India | +91 8802078821 | rajeshnautiyal213@gmail.com | linkedin.com/in/nautiyalrajesh</p>
           </div>
-          <a class="button" href="mailto:rajeshnautiyal213@gmail.com">Email Me</a>
+          <div class="actions">
+            <a class="button" href="mailto:rajeshnautiyal213@gmail.com">Email Me</a>
+            <a class="button secondary" href="assets/Rajesh_Nautiyal_Resume_2026_v2.pdf" download>Download Resume</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>© 2026 Rajesh Nautiyal. Built for GitHub Pages.</span>
+      <span>&copy; 2026 Rajesh Nautiyal. Built for GitHub Pages.</span>
     </footer>
   </div>
+  <script>
+    const timelineNodes = document.querySelectorAll(".timeline-node");
+    const timelinePeriod = document.getElementById("timeline-period");
+    const timelineRole = document.getElementById("timeline-role");
+    const timelineSummary = document.getElementById("timeline-summary");
+    const experienceDetailsList = document.getElementById("experience-details-list");
+
+    timelineNodes.forEach((node) => {
+      node.addEventListener("click", () => {
+        timelineNodes.forEach((item) => {
+          item.classList.remove("is-active");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        node.classList.add("is-active");
+        node.setAttribute("aria-pressed", "true");
+        timelinePeriod.textContent = node.dataset.period;
+        timelineRole.textContent = node.dataset.role;
+        timelineSummary.textContent = node.dataset.summary;
+        experienceDetailsList.innerHTML = "";
+        node.dataset.details.split("|").forEach((detail) => {
+          const item = document.createElement("li");
+          item.textContent = detail;
+          experienceDetailsList.appendChild(item);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
