@@ -8,16 +8,16 @@
   <style>
     :root {
       color-scheme: dark;
-      --ink: #f7fbff;
-      --muted: #a7b4c2;
-      --line: rgba(255, 255, 255, 0.12);
-      --paper: rgba(14, 22, 33, 0.84);
-      --soft: #05070b;
-      --brand: #2dd4bf;
-      --brand-dark: #5eead4;
-      --accent: #f59e0b;
-      --accent-soft: rgba(245, 158, 11, 0.16);
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      --ink: #f8fbff;
+      --muted: #d8dde2;
+      --line: rgba(255, 255, 255, 0.18);
+      --paper: rgba(35, 37, 39, 0.76);
+      --soft: #232527;
+      --brand: #0078d4;
+      --brand-dark: #66c2ff;
+      --accent: #9fd6ff;
+      --accent-soft: rgba(0, 120, 212, 0.2);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
     }
 
     * {
@@ -30,13 +30,10 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "Inter", "Trebuchet MS", Arial, sans-serif;
+      font-family: "Segoe UI Variable", "Segoe UI", Inter, Arial, sans-serif;
       line-height: 1.5;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 18% 8%, rgba(45, 212, 191, 0.16), transparent 28%),
-        radial-gradient(circle at 86% 18%, rgba(245, 158, 11, 0.12), transparent 30%),
-        linear-gradient(180deg, #05070b 0%, #09111c 48%, #05070b 100%);
+      background: #202224;
     }
 
     a {
@@ -57,7 +54,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(5, 7, 11, 0.82);
+      background: rgba(32, 34, 36, 0.88);
       backdrop-filter: blur(16px);
     }
 
@@ -88,14 +85,16 @@
     .nav-links a {
       color: #d7e3ee;
       font-weight: 600;
+      text-shadow: 0 1px 8px rgba(2, 28, 52, 0.42);
     }
 
     .hero {
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(245, 158, 11, 0.06)),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+        linear-gradient(122deg, rgba(255, 255, 255, 0) 0 42%, rgba(255, 255, 255, 0.34) 43% 54%, rgba(255, 255, 255, 0.08) 55% 65%, rgba(255, 255, 255, 0) 66%),
+        linear-gradient(105deg, rgba(255, 255, 255, 0) 0 60%, rgba(255, 255, 255, 0.18) 61% 67%, rgba(255, 255, 255, 0) 68%),
+        linear-gradient(90deg, #343637 0%, #3f4143 44%, #66686a 100%);
       border-bottom: 1px solid var(--line);
     }
 
@@ -115,7 +114,7 @@
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0;
-      text-transform: uppercase;
+      text-transform: none;
     }
 
     h1 {
@@ -123,7 +122,8 @@
       font-size: clamp(38px, 6vw, 58px);
       line-height: 0.96;
       letter-spacing: 0;
-      font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
+      font-family: "Segoe UI Variable", "Segoe UI", Inter, Arial, sans-serif;
+      font-weight: 750;
       text-shadow: 0 12px 38px rgba(0, 0, 0, 0.55);
     }
 
@@ -132,6 +132,7 @@
       margin: 16px 0 0;
       color: var(--muted);
       font-size: 17px;
+      text-shadow: 0 2px 12px rgba(2, 28, 52, 0.42);
     }
 
     .actions {
@@ -150,15 +151,15 @@
       gap: 8px;
       border: 1px solid var(--brand);
       border-radius: 6px;
-      background: linear-gradient(135deg, #2dd4bf, #0f766e);
-      color: #03100e;
+      background: #0078d4;
+      color: #ffffff;
       font-weight: 700;
-      box-shadow: 0 14px 34px rgba(45, 212, 191, 0.18);
+      box-shadow: 0 14px 34px rgba(0, 120, 212, 0.26);
       transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
     .button:hover {
-      background: linear-gradient(135deg, #5eead4, #14b8a6);
+      background: #0f8de8;
       text-decoration: none;
       transform: translateY(-2px);
     }
@@ -170,39 +171,47 @@
     }
 
     .button.secondary {
-      background: rgba(255, 255, 255, 0.05);
-      color: #e8f6f4;
-      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      border-color: rgba(255, 255, 255, 0.36);
       box-shadow: none;
     }
 
     .button.secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.24);
     }
 
-    .hero-stats {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      max-width: 620px;
+    .button.resume {
+      background: #7c3aed;
+      border-color: #a78bfa;
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(124, 58, 237, 0.28);
     }
 
-    .hero-stats span {
-      display: block;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.055);
-      color: var(--muted);
-      font-size: 13px;
+    .button.resume:hover {
+      background: #8b5cf6;
     }
 
-    .hero-stats strong {
-      display: block;
-      color: var(--ink);
-      font-size: 21px;
-      line-height: 1.1;
+    .button.linkedin {
+      background: #0a66c2;
+      border-color: #4ea3f1;
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(10, 102, 194, 0.26);
+    }
+
+    .button.linkedin:hover {
+      background: #0b7bd3;
+    }
+
+    .button.email {
+      background: linear-gradient(135deg, #4285f4 0%, #34a853 48%, #fbbc05 76%, #ea4335 100%);
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(66, 133, 244, 0.24);
+    }
+
+    .button.email:hover {
+      background: linear-gradient(135deg, #5b96f6 0%, #42b866 48%, #fcca38 76%, #ef6257 100%);
     }
 
     .portrait-wrap {
@@ -213,7 +222,7 @@
       border-radius: 8px;
       box-shadow: var(--shadow), 0 0 0 8px rgba(255, 255, 255, 0.045);
       overflow: hidden;
-      background: #111827;
+      background: #2d2f31;
     }
 
     .portrait-wrap img {
@@ -242,7 +251,8 @@
       margin: 0 0 12px;
       font-size: 21px;
       line-height: 1.2;
-      font-family: "Segoe UI Semibold", "Trebuchet MS", Arial, sans-serif;
+      font-family: "Segoe UI Variable", "Segoe UI", Inter, Arial, sans-serif;
+      font-weight: 700;
     }
 
     .section > p {
@@ -271,8 +281,8 @@
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(45, 212, 191, 0.42);
-      background: rgba(18, 29, 43, 0.94);
+      border-color: rgba(159, 214, 255, 0.42);
+      background: rgba(45, 47, 49, 0.92);
     }
 
     .card h3,
@@ -313,6 +323,22 @@
       transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
+    .timeline-node::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-top: 12px solid #0078d4;
+      opacity: 0;
+      transform: translateX(-50%) translateY(-4px);
+      transition: opacity 180ms ease, transform 180ms ease;
+      pointer-events: none;
+    }
+
     .timeline-node::before {
       counter-increment: timeline-step;
       content: counter(timeline-step);
@@ -324,7 +350,7 @@
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: rgba(45, 212, 191, 0.14);
+      background: rgba(0, 120, 212, 0.22);
       color: var(--brand-dark);
       font-size: 12px;
       font-weight: 800;
@@ -333,12 +359,21 @@
     .timeline-node:hover,
     .timeline-node.is-active {
       transform: translateY(-4px);
-      border-color: rgba(45, 212, 191, 0.52);
-      background: rgba(18, 29, 43, 0.94);
+      border-color: rgba(159, 214, 255, 0.52);
+      background: rgba(45, 47, 49, 0.92);
     }
 
     .timeline-node.is-active {
-      box-shadow: 0 16px 42px rgba(45, 212, 191, 0.18);
+      border-color: #66c2ff;
+      background:
+        linear-gradient(135deg, rgba(0, 120, 212, 0.42), rgba(45, 47, 49, 0.94)),
+        #2d2f31;
+      box-shadow: 0 18px 46px rgba(0, 120, 212, 0.36), inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+    }
+
+    .timeline-node.is-active::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
 
     .timeline-dot {
@@ -381,10 +416,10 @@
     .timeline-detail {
       min-height: 112px;
       padding: 16px;
-      border: 1px solid rgba(45, 212, 191, 0.32);
+      border: 1px solid rgba(159, 214, 255, 0.3);
       border-radius: 8px;
       background:
-        linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(245, 158, 11, 0.07)),
+        linear-gradient(135deg, rgba(0, 120, 212, 0.14), rgba(255, 255, 255, 0.05)),
         var(--paper);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
     }
@@ -427,28 +462,30 @@
 
     .skills {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
       padding: 0;
       margin: 0;
       list-style: none;
     }
 
     .skills li {
-      padding: 9px 12px;
+      padding: 8px 10px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 1.35;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
     }
 
     .skills strong {
-      display: inline;
-      margin-right: 6px;
+      display: block;
+      margin: 0 0 3px;
       color: var(--ink);
-      font-size: 14px;
+      font-size: 13px;
+      line-height: 1.25;
     }
 
     .education-grid {
@@ -467,8 +504,8 @@
       padding: 20px;
       border-radius: 8px;
       background:
-        linear-gradient(135deg, rgba(45, 212, 191, 0.16), rgba(245, 158, 11, 0.12)),
-        #08111c;
+        linear-gradient(135deg, rgba(0, 120, 212, 0.18), rgba(255, 255, 255, 0.08)),
+        #2b2d2f;
       border: 1px solid var(--line);
       color: #ffffff;
     }
@@ -486,8 +523,28 @@
 
     .contact .button {
       border-color: var(--brand);
-      background: linear-gradient(135deg, #2dd4bf, #0f766e);
-      color: #03100e;
+      background: #0078d4;
+      color: #ffffff;
+    }
+
+    .contact .button.resume {
+      background: #7c3aed;
+      border-color: #a78bfa;
+      color: #ffffff;
+    }
+
+    .contact .button.resume:hover {
+      background: #8b5cf6;
+    }
+
+    .contact .button.email {
+      background: linear-gradient(135deg, #4285f4 0%, #34a853 48%, #fbbc05 76%, #ea4335 100%);
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #ffffff;
+    }
+
+    .contact .button.email:hover {
+      background: linear-gradient(135deg, #5b96f6 0%, #42b866 48%, #fcca38 76%, #ef6257 100%);
     }
 
     footer {
@@ -516,10 +573,6 @@
         gap: 24px;
       }
 
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
       h1 {
         font-size: clamp(38px, 12vw, 52px);
       }
@@ -544,6 +597,19 @@
       .timeline-node {
         min-height: auto;
         padding: 14px;
+      }
+
+      .timeline-node::after {
+        left: 22px;
+        bottom: -12px;
+        border-left-width: 9px;
+        border-right-width: 9px;
+        border-top-width: 10px;
+        transform: translateY(-4px);
+      }
+
+      .timeline-node.is-active::after {
+        transform: translateY(0);
       }
 
       .timeline-dot {
@@ -578,19 +644,15 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <div>
+          <p class="eyebrow">AI Automation Engineering Enthusiast</p>
           <h1>Rajesh Nautiyal</h1>
           <p class="intro">
-            Senior Professional II - Infrastructure Validation, Automation & AI-Assisted Engineering
+            Senior Professional II @Capgemini India - Infrastructure Validation, Automation & AI-Assisted Engineering
           </p>
           <div class="actions">
-            <a class="button" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
-            <a class="button secondary" href="https://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="button secondary" href="mailto:rajeshnautiyal213@gmail.com">Email</a>
-          </div>
-          <div class="hero-stats" aria-label="Career highlights">
-            <span><strong>14+</strong>Years Experience</span>
-            <span><strong>150+</strong>Devices Managed</span>
-            <span><strong>500+</strong>Automation Scripts</span>
+            <a class="button resume" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
+            <a class="button linkedin" href="https://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button email" href="mailto:rajeshnautiyal213@gmail.com">Email</a>
           </div>
         </div>
         <div class="portrait-wrap">
@@ -636,11 +698,11 @@
             <strong>Capgemini</strong>
             <small>AI-Assisted Engineering</small>
           </button>
-          <button class="timeline-node" type="button" aria-pressed="false" data-role="Senior Professional II - Infrastructure Validation and Regression Leadership" data-period="Dec 2022 - Present" data-summary="Lead regression and validation for Cisco NXOS and IOS-XE platforms, managing lab readiness, automation infrastructure, Jenkins workflows, and release quality." data-details="Lead regression and validation for Cisco NXOS and IOS-XE platforms, collaborating directly with Cisco engineering teams on enterprise networking releases.|Lead a team of 5 engineers across regression execution, script maintenance, failure triage, release validation, defect follow-up, and quality sign-off.|Manage validation infrastructure of 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.|Own lab readiness, topology creation, hardware allocation, Linux administration, Python environments, and end-to-end Jenkins-based validation workflows.">
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Senior Professional II - Automation Regression Leadership" data-period="Dec 2022 - Present" data-summary="Lead regression and validation for Cisco NXOS and IOS-XE platforms, managing lab readiness, automation infrastructure, Jenkins workflows, and release quality." data-details="Lead regression and validation for Cisco NXOS and IOS-XE platforms, collaborating directly with Cisco engineering teams on enterprise networking releases.|Lead a team of 5 engineers across regression execution, script maintenance, failure triage, release validation, defect follow-up, and quality sign-off.|Manage validation infrastructure of 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.|Own lab readiness, topology creation, hardware allocation, Linux administration, Python environments, and end-to-end Jenkins-based validation workflows.">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="timeline-period">Dec 2022 - Present</span>
             <strong>Capgemini</strong>
-            <small>Infrastructure Validation</small>
+            <small>Automation Regression Leadership</small>
           </button>
           <button class="timeline-node" type="button" aria-pressed="false" data-role="Technical Lead - TCS" data-period="Mar 2018 - Dec 2022" data-summary="Led Cisco regression triage, automation execution, defect analysis, release validation, and PyATS-based validation workflows for NXOS and IOS-XE platforms." data-details="Led a team of 6 engineers across regression triage, automation execution, defect analysis, and release validation for Cisco NXOS and IOS-XE platforms.|Designed and managed CI/CD-based regression workflows, including Jenkins job execution, regression scheduling, failure tracking, and release-readiness reporting.|Owned complex regression debugging and escalation handling by analyzing automation scripts, framework behavior, parser outputs, device logs, and protocol states.|Partnered with PyATS development teams to validate new and enhanced automation libraries, identify framework gaps, and raise enhancement requests with reproduction steps.|Developed and maintained Python/PyATS validation scripts for protocol testing, configuration validation, telemetry validation, API response verification, and regression workflows.|Designed automation flows for model-driven programmability validation using YANG models, REST APIs, and JSON/YAML parsing.|Mentored team members on PyATS workflows, CI/CD regression execution, script debugging, and Cisco platform troubleshooting.">
             <span class="timeline-dot" aria-hidden="true"></span>
@@ -747,11 +809,12 @@
         <div class="contact">
           <div>
             <h2 class="section-title">Contact</h2>
-            <p>Delhi NCR, India | +91 8802078821 | rajeshnautiyal213@gmail.com | linkedin.com/in/nautiyalrajesh</p>
+            <p>Delhi NCR, India | +91 8802078821 | rajeshnautiyal213@gmail.com</p>
           </div>
           <div class="actions">
-            <a class="button" href="mailto:rajeshnautiyal213@gmail.com">Email Me</a>
-            <a class="button secondary" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
+            <a class="button resume" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
+            <a class="button linkedin" href="https://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button email" href="mailto:rajeshnautiyal213@gmail.com">Email</a>
           </div>
         </div>
       </section>
