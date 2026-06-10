@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rajesh Nautiyal | Network Automation Lead</title>
+  <title>Rajesh Nautiyal | Senior Professional II</title>
   <meta name="description" content="Portfolio website for Rajesh Nautiyal, Senior Professional II - Infrastructure Validation, Automation & AI-Assisted Engineering.">
   <style>
     :root {
@@ -293,7 +293,7 @@
     .timeline {
       position: relative;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 14px;
       counter-reset: timeline-step;
@@ -455,6 +455,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .contact {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -528,6 +532,7 @@
 
       .grid,
       .skills,
+      .projects-grid,
       .education-grid {
         grid-template-columns: 1fr;
       }
@@ -565,7 +570,7 @@
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a href="assets/Rajesh_Nautiyal_Resume_2026_v2.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
       </nav>
     </header>
@@ -578,7 +583,7 @@
             Senior Professional II - Infrastructure Validation, Automation & AI-Assisted Engineering
           </p>
           <div class="actions">
-            <a class="button" href="assets/Rajesh_Nautiyal_Resume_2026_v2.pdf" download>Download Resume</a>
+            <a class="button" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
             <a class="button secondary" href="https://linkedin.com/in/nautiyalrajesh" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="button secondary" href="mailto:rajeshnautiyal213@gmail.com">Email</a>
           </div>
@@ -625,43 +630,46 @@
       <section class="section" id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="timeline" aria-label="Career timeline">
-          <button class="timeline-node is-active" type="button" aria-pressed="true" data-role="Senior Professional II - Capgemini" data-period="Dec 2022 - Present" data-summary="Lead regression and automation validation for Cisco NXOS and IOS-XE platforms, manage large-scale lab readiness, and collaborate directly with Cisco engineering teams on enterprise networking releases." data-details="Lead a team of 5 engineers responsible for regression execution, automation maintenance, failure triage, release validation, and quality sign-off activities.|Manage large-scale automation infrastructure comprising 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.|Own automation lab readiness, topology creation, hardware allocation, Linux administration, and Python-based validation environments.|Designed and implemented an AI-powered regression support assistant enabling engineers to access regression insights, troubleshooting guidance, and operational knowledge on demand.|Developed AI-assisted root cause analysis and failure triage solutions using domain-specific RAG, reducing investigation time from 1-2 hours to approximately 15 minutes.|Built AI-assisted topology validation and infrastructure automation solutions for connectivity verification, device cleanup, baseline provisioning, and environment readiness.|Leveraged GitHub Copilot, Codex, and AI-assisted development workflows to accelerate automation development, code remediation, debugging, and engineering productivity.|Developed a Django-based infrastructure management application for Cisco UCS environments using Codex-assisted development workflows, supporting virtual device lifecycle management and operational monitoring.|Trained and mentored 10+ engineers on automation frameworks, AI-assisted troubleshooting, Cisco platform debugging, and operational best practices.">
+          <button class="timeline-node is-active" type="button" aria-pressed="true" data-role="Senior Professional II - AI-Assisted Engineering and Automation Initiatives" data-period="Jan 2025 - Present" data-summary="Build AI-assisted engineering workflows for regression triage, RCA, topology validation, infrastructure readiness, code remediation, and engineering productivity." data-details="Reduced failure-triage and RCA investigation time from 1-2 hours to approximately 15 minutes by building AI-assisted workflows on an internal domain-specific RAG (MdRAG).|Designed and deployed an AI-powered regression support assistant giving engineers on-demand access to regression insights, troubleshooting guidance, and execution status.|Created reusable AI skillsets and structured bot instructions enabling engineers to access validation workflows and operational knowledge through conversational interfaces.|Built AI-assisted topology validation and infrastructure-readiness solutions covering interface and CDP verification, connectivity checks, device cleanup, and baseline provisioning.|Accelerated script development, repository analysis, code remediation, and debugging using OpenAI Codex, GitHub Copilot, and AI-assisted development workflows.|Developed a Django-based Cisco UCS infrastructure-management application supporting virtual device lifecycle management and operational monitoring.">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-period">Jan 2025 - Present</span>
+            <strong>Capgemini</strong>
+            <small>AI-Assisted Engineering</small>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Senior Professional II - Infrastructure Validation and Regression Leadership" data-period="Dec 2022 - Present" data-summary="Lead regression and validation for Cisco NXOS and IOS-XE platforms, managing lab readiness, automation infrastructure, Jenkins workflows, and release quality." data-details="Lead regression and validation for Cisco NXOS and IOS-XE platforms, collaborating directly with Cisco engineering teams on enterprise networking releases.|Lead a team of 5 engineers across regression execution, script maintenance, failure triage, release validation, defect follow-up, and quality sign-off.|Manage validation infrastructure of 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.|Own lab readiness, topology creation, hardware allocation, Linux administration, Python environments, and end-to-end Jenkins-based validation workflows.">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="timeline-period">Dec 2022 - Present</span>
             <strong>Capgemini</strong>
-            <small>Senior Professional II</small>
+            <small>Infrastructure Validation</small>
           </button>
-          <button class="timeline-node" type="button" aria-pressed="false" data-role="Associate Consultant / Technical Lead - TCS" data-period="Mar 2018 - Dec 2022" data-summary="Led Cisco automation and regression testing using PyATS, YANG models, REST APIs, JSON/YAML parsing, Linux servers, Cisco UCS labs, and model-driven programmability validation." data-details="Led automation and regression testing initiatives for Cisco NXOS and IOS-XE platforms.|Tested, validated, and supported Python-based automation scripts using PyATS, YANG models, REST APIs, JSON/YAML parsing, and Cisco internal automation libraries.|Set up environments and automation flows for model-driven programmability validation, including device configuration validation, telemetry validation, and API response validation.|Managed automation labs, Linux servers, regression infrastructure, and Cisco UCS-based test environments.|Supported regression testing and automation validation for protocol scripts covering VXLAN, BGP, OSPF, EIGRP, HSRP, VRRP, VLAN, STP, EVPN, and MPLS.|Performed failure analysis, root cause support, defect tracking, and quality validation for Cisco platform releases.|Coordinated automation integrations and release validation activities across multiple Cisco platform teams.">
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Technical Lead - TCS" data-period="Mar 2018 - Dec 2022" data-summary="Led Cisco regression triage, automation execution, defect analysis, release validation, and PyATS-based validation workflows for NXOS and IOS-XE platforms." data-details="Led a team of 6 engineers across regression triage, automation execution, defect analysis, and release validation for Cisco NXOS and IOS-XE platforms.|Designed and managed CI/CD-based regression workflows, including Jenkins job execution, regression scheduling, failure tracking, and release-readiness reporting.|Owned complex regression debugging and escalation handling by analyzing automation scripts, framework behavior, parser outputs, device logs, and protocol states.|Partnered with PyATS development teams to validate new and enhanced automation libraries, identify framework gaps, and raise enhancement requests with reproduction steps.|Developed and maintained Python/PyATS validation scripts for protocol testing, configuration validation, telemetry validation, API response verification, and regression workflows.|Designed automation flows for model-driven programmability validation using YANG models, REST APIs, and JSON/YAML parsing.|Mentored team members on PyATS workflows, CI/CD regression execution, script debugging, and Cisco platform troubleshooting.">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="timeline-period">Mar 2018 - Dec 2022</span>
             <strong>TCS</strong>
-            <small>Associate Consultant / Technical Lead</small>
+            <small>Technical Lead</small>
           </button>
-          <button class="timeline-node" type="button" aria-pressed="false" data-role="Automation Testing Engineer - TCS" data-period="May 2012 - Feb 2018" data-summary="Built TCL automation for router and switch validation, supported L2/L3 protocol regression, debugged device logs and failures, and handled defect reporting for Cisco releases." data-details="Developed TCL automation scripts for router and switch command validation.|Performed regression testing and debugging support for Cisco NXOS and IOS-XE platforms.|Worked on L2/L3 protocol script regression testing and automation validation.|Analyzed device logs, test failures, automation errors, and regression results to identify issues.|Supported defect reporting and issue tracking using Cisco internal defect management tools.">
+          <button class="timeline-node" type="button" aria-pressed="false" data-role="Automation Engineer - TCS" data-period="May 2012 - Feb 2018" data-summary="Developed and maintained TCL-based validation scripts, regression parsers, and automation logic for Cisco router and switch validation." data-details="Developed and maintained TCL-based validation scripts and regression parsers for router and switch command verification across Cisco NXOS and IOS-XE platforms.|Enhanced TCL logic for command execution, output parsing, result comparison, error handling, and regression reporting.|Debugged TCL scripts, parser failures, and execution errors during Cisco platform release cycles.|Analyzed device logs, parser outputs, and protocol states to identify root causes and support defect triage.">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="timeline-period">May 2012 - Feb 2018</span>
             <strong>TCS</strong>
-            <small>Automation Testing Engineer</small>
+            <small>Automation Engineer</small>
           </button>
         </div>
         <article class="timeline-detail" aria-live="polite">
-          <div class="timeline-period" id="timeline-period">Dec 2022 - Present</div>
-          <h3 id="timeline-role">Senior Professional II - Capgemini</h3>
+          <div class="timeline-period" id="timeline-period">Jan 2025 - Present</div>
+          <h3 id="timeline-role">Senior Professional II - AI-Assisted Engineering and Automation Initiatives</h3>
           <p id="timeline-summary">
-            Lead regression and automation validation for Cisco NXOS and IOS-XE
-            platforms, manage large-scale lab readiness, and collaborate directly
-            with Cisco engineering teams on enterprise networking releases.
+            Build AI-assisted engineering workflows for regression triage, RCA,
+            topology validation, infrastructure readiness, code remediation, and
+            engineering productivity.
           </p>
           <ul class="experience-detail-list" id="experience-details-list">
-            <li>Lead a team of 5 engineers responsible for regression execution, automation maintenance, failure triage, release validation, and quality sign-off activities.</li>
-            <li>Manage large-scale automation infrastructure comprising 150+ physical and virtual devices and 500+ automation scripts supporting multiple parallel release cycles.</li>
-            <li>Own automation lab readiness, topology creation, hardware allocation, Linux administration, and Python-based validation environments.</li>
-            <li>Designed and implemented an AI-powered regression support assistant enabling engineers to access regression insights, troubleshooting guidance, and operational knowledge on demand.</li>
-            <li>Developed AI-assisted root cause analysis and failure triage solutions using domain-specific RAG, reducing investigation time from 1-2 hours to approximately 15 minutes.</li>
-            <li>Built AI-assisted topology validation and infrastructure automation solutions for connectivity verification, device cleanup, baseline provisioning, and environment readiness.</li>
-            <li>Leveraged GitHub Copilot, Codex, and AI-assisted development workflows to accelerate automation development, code remediation, debugging, and engineering productivity.</li>
-            <li>Developed a Django-based infrastructure management application for Cisco UCS environments using Codex-assisted development workflows, supporting virtual device lifecycle management and operational monitoring.</li>
-            <li>Trained and mentored 10+ engineers on automation frameworks, AI-assisted troubleshooting, Cisco platform debugging, and operational best practices.</li>
+            <li>Reduced failure-triage and RCA investigation time from 1-2 hours to approximately 15 minutes by building AI-assisted workflows on an internal domain-specific RAG (MdRAG).</li>
+            <li>Designed and deployed an AI-powered regression support assistant giving engineers on-demand access to regression insights, troubleshooting guidance, and execution status.</li>
+            <li>Created reusable AI skillsets and structured bot instructions enabling engineers to access validation workflows and operational knowledge through conversational interfaces.</li>
+            <li>Built AI-assisted topology validation and infrastructure-readiness solutions covering interface and CDP verification, connectivity checks, device cleanup, and baseline provisioning.</li>
+            <li>Accelerated script development, repository analysis, code remediation, and debugging using OpenAI Codex, GitHub Copilot, and AI-assisted development workflows.</li>
+            <li>Developed a Django-based Cisco UCS infrastructure-management application supporting virtual device lifecycle management and operational monitoring.</li>
           </ul>
         </article>
       </section>
@@ -683,32 +691,21 @@
 
       <section class="section">
         <h2 class="section-title">Projects</h2>
-        <div class="grid">
+        <div class="grid projects-grid">
           <article class="card">
-            <h3>AI-Powered Network Validation and Failure Triage Solution</h3>
-            <p>AI-assisted triage and RCA solution that analyzes Jenkins failures, traceback errors, device logs, regression result files, and historical defect data to suggest probable root causes and next debugging steps.</p>
+            <h3>AI-Powered Chat Bot - Failure Triage and RCA Solution</h3>
+            <p>AI-assisted solution that analyzes regression failures, traceback errors, device logs, and historical defect data to suggest probable root causes, debugging steps, and known-issue correlations.</p>
             <ul>
-              <li>Analyzes Jenkins failures, traceback errors, device logs, regression result files, and historical defect data.</li>
-              <li>Identifies probable root causes and recommends practical next debugging steps.</li>
-              <li>Correlates current failures with past known issues to speed up validation decisions.</li>
+              <li>Reduced manual triage effort by correlating current failures with historical defect patterns.</li>
+              <li>Tech stack: Webex Chat, OpenAI Codex, internal MdRAG integration, SCRBOT API configuration, Red Hat Server.</li>
             </ul>
           </article>
           <article class="card">
-            <h3>AI-Driven Network Operations Assistant</h3>
-            <p>AI-powered automation workflows leveraging domain-specific instructions, Copilot, Codex, and internal knowledge systems for regression insights, troubleshooting guidance, topology validation, and infrastructure operations support.</p>
+            <h3>AI-Driven UCS Operations Assistant</h3>
+            <p>AI workflows using domain-specific instructions and internal knowledge systems to support regression insights, topology validation, infrastructure operations, and troubleshooting recommendations.</p>
             <ul>
-              <li>Provides regression insights and troubleshooting guidance using domain-specific instructions and internal knowledge systems.</li>
-              <li>Supports topology validation, infrastructure operations, and automation recommendations.</li>
-              <li>Uses Copilot, Codex, and agent-assisted workflows to improve engineering productivity.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Cisco Regression Automation Framework</h3>
-            <p>Regression ecosystem spanning 150+ devices, 500+ scripts, Jenkins jobs, Python environments, lab readiness, and continuous validation.</p>
-            <ul>
-              <li>Supports 150+ physical and virtual devices and 500+ automation scripts across Cisco NXOS and IOS-XE platforms.</li>
-              <li>Covers lab readiness, Jenkins job execution, Python environments, and continuous regression workflows.</li>
-              <li>Enables parallel release validation with structured automation maintenance and infrastructure readiness.</li>
+              <li>Supports infrastructure operations and troubleshooting recommendations for Cisco UCS environments.</li>
+              <li>Tech stack: OpenAI Codex, Python, internal MdRAG.</li>
             </ul>
           </article>
         </div>
@@ -754,7 +751,7 @@
           </div>
           <div class="actions">
             <a class="button" href="mailto:rajeshnautiyal213@gmail.com">Email Me</a>
-            <a class="button secondary" href="assets/Rajesh_Nautiyal_Resume_2026_v2.pdf" download>Download Resume</a>
+            <a class="button secondary" href="assets/Rajesh_Nautiyal_Resume_2026_v3.pdf" download>Download Resume</a>
           </div>
         </div>
       </section>
